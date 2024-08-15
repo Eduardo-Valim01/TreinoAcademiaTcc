@@ -2,6 +2,7 @@
 
 namespace TreinoAcademiaTcc
 {
+    //Aqui posso configurar quais as classes que são iniciadas, fontes
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
