@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoTCC.View.Login"
+             Title="Login"
+             NavigationPage.HasNavigationBar="False">
+             
+    
+    <?Forma de empilhamento?>
+    <VerticalStackLayout
+        Padding="30,0"
+            Spacing="25"
+        VerticalOptions="Center">
+            <Image Source = "haltere.png" HeightRequest="150" WidthRequest="150"/>
+
+            <VerticalStackLayout>
+                <Label Text="Bem-Vindo" FontSize="30" TextColor="Gray" HorizontalTextAlignment="Center"/>
+                <Label Text="Faça login na sua conta" FontSize="18" TextColor="Gray" HorizontalTextAlignment="Center"/>
+            </VerticalStackLayout>
+
+            <?Empilhamento na vertical com esse orientaton temos 2 frames uma na frente do outro?>
+            <StackLayout Orientation="Horizontal">
+                <Frame HasShadow="True" BorderColor="White" HeightRequest="56" CornerRadius="28">
+                    <Image Source="user.png" HeightRequest="20" WidthRequest="20"/>
+                </Frame>
+
+                <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite seu Nome" Keyboard="Email"/>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Frame HasShadow="True" BorderColor="White" HeightRequest="56" CornerRadius="28">
+                    <Image Source="lock.png" HeightRequest="20" WidthRequest="20"/>
+                </Frame>
+
+                <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite sua Senha" Keyboard="Email"/>
+                </Frame>
+            </StackLayout>
+
+            <Button x:Name="btnConfirmar" Clicked="btnConfirmar_Clicked" Text="Confirmar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#fcad03"/>
+
+            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" >
+                <Label Text="Não tem conta?" TextColor="Gray"/>
+
+                <Button x:Name="btnCadastrar" Clicked="btnCadastrar_Clicked" Text="Clique Aqui" WidthRequest="120" HeightRequest="25" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#1E90FF" Padding="0"/>
+
+            </StackLayout>
+        </VerticalStackLayout>
+</ContentPage>

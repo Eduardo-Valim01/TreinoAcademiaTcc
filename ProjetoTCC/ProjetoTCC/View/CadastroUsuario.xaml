@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sys="clr-namespace:System;assembly=System.Runtime"
+             x:Class="ProjetoTCC.View.CadastroUsuario"
+             Title=""
+             NavigationPage.HasNavigationBar="True">
+
+    <VerticalStackLayout Padding="20" Spacing="10">
+        <Label Text="Cadastro de Usuário" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+        <Entry x:Name="IDEntry" Placeholder="ID" Keyboard="Numeric" />
+        <Entry x:Name="NomeEntry" Placeholder="Nome" />
+        <Picker x:Name="SexoPicker" Title="Sexo">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Masculino</x:String>
+                    <x:String>Feminino</x:String>
+                    <x:String>Outro</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <DatePicker x:Name="DataNascimentoPicker" Date="{x:Static sys:DateTime.Now}" />
+        <Entry x:Name="EmailEntry" Placeholder="Email" Keyboard="Email" />
+        <Entry x:Name="SenhaEntry" Placeholder="Senha" IsPassword="True" />
+        <Picker x:Name="TipoUsuarioPicker" Title="Tipo de Usuário">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Aluno</x:String>
+                    <x:String>Professor</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+        <Button Text="Cadastrar" Clicked="OnCadastrarClicked" Margin="0,20,0,0" BackgroundColor="#fcad03" />
+        <Button Text="Limpar" Clicked="OnCancelarClicked" Margin="0,20,0,0" BackgroundColor="#fcad03"/>
+    </VerticalStackLayout>
+</ContentPage>
