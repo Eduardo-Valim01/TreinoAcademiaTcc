@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoTCC.View.EscolhaSemanaALuno"
+             Title="">
+    <VerticalStackLayout>
+        <Label Text="Escolha o dia do Treino" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20" />
+        
+        <Button x:Name="btnSegunda" Text="Segunda-Feira" Clicked="btnSegunda_Clicked" Margin="0,50,0,0" BackgroundColor="#fcad03" />
+        <Button x:Name="btnTerca" Text="Terça-Feira" Clicked="btnTerca_Clicked" Margin="0,30,0,0" BackgroundColor="#fcad03" />
+        <Button x:Name="btnQuarta" Text="Quarta-Feira" Clicked="btnQuarta_Clicked" Margin="0,30,0,0" BackgroundColor="#fcad03" />
+        <Button x:Name="btnQuinta" Text="Quinta-Feira" Clicked="btnQuinta_Clicked" Margin="0,30,0,0" BackgroundColor="#fcad03" />
+        <Button x:Name="btnSexta" Text="Sexta-Feira" Clicked="btnSexta_Clicked" Margin="0,30,0,0" BackgroundColor="#fcad03" />
+    </VerticalStackLayout>
+</ContentPage>

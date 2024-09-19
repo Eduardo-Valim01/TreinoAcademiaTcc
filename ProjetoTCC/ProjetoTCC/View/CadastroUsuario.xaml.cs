@@ -6,43 +6,29 @@ namespace ProjetoTCC.View
 {
     public partial class CadastroUsuario : ContentPage
     {
+        Usuario _usuario;
+
         public CadastroUsuario()
         {
             InitializeComponent();
+            _usuario = new Usuario();
+
+            this.BindingContext = _usuario;
 
             // Popula os Pickers com os valores dos enums
             SexoPicker.ItemsSource = Enum.GetValues(typeof(Sexo));
             TipoUsuarioPicker.ItemsSource = Enum.GetValues(typeof(TipoUsuario));
         }
 
-        private void OnCadastrarClicked(object sender, EventArgs e)
+        private async void btnCadastrar_Clicked(object sender, EventArgs e)
         {
-            if (!int.TryParse(IDEntry.Text, out var id))
+            if(string.IsNullOrWhiteSpace(_usuario.Email) &&
+                string.IsNullOrWhiteSpace(_usuario.Senha))
             {
-                // Tratar erro de ID inválido
-                DisplayAlert("Erro", "ID inválido", "OK");
+                await DisplayAlert("Atenção", "Prencha todas informações", "Fechar");
                 return;
+
             }
-
-            var nome = NomeEntry.Text;
-            var sexo = (Sexo)SexoPicker.SelectedItem;
-            var dataNasc = DataNascimentoPicker.Date;
-            var email = EmailEntry.Text;
-            var senha = SenhaEntry.Text;
-            var tipoUsuario = (TipoUsuario)TipoUsuarioPicker.SelectedItem;
-
-            var usuario = new Usuario
-            {
-                Id = id,
-                Nome = nome,
-                Sexo = sexo,
-                DataNasc = dataNasc,
-                Email = email,
-                Senha = senha,
-                TipoUsuario = tipoUsuario
-            };
-
-            // Implementar a lógica de cadastro aqui
         }
 
         private void OnCancelarClicked(object sender, EventArgs e)

@@ -21,12 +21,17 @@ namespace ProjetoTCC.Model
 
     public class Usuario
     {
-        public int Id { get; set; }
+        public Guid Id { get; set; }
         public string Nome { get; set; }
         public Sexo Sexo { get; set; }
         public DateTime DataNasc { get; set; }
         public string Email { get; set; }
         public string Senha { get; set; }
         public TipoUsuario TipoUsuario { get; set; }
+
+        public Usuario() 
+        {
+            Id = Guid.NewGuid();
+        }
     }
 }

@@ -17,6 +17,18 @@ public partial class Login : ContentPage
     {
         
     }
+
+    private void btnAluno_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new EscolhaSemanaALuno());
+
+    }
+
+    private void btnProfessor_Clicked(object sender, EventArgs e)
+    {
+        Navigation.PushAsync(new ListaAlunos());
+
+    }
 }
 
 

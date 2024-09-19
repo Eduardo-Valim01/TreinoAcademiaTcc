@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoTCC.View.ListaAlunos"
+             Title="">
+ 
+        <VerticalStackLayout Padding="20">
+            <!-- Campo de busca -->
+            <SearchBar x:Name="SearchBar"
+                   Placeholder="Digite o nome do aluno"
+                   SearchButtonPressed="OnSearchButtonPressed"
+                   TextChanged="OnSearchTextChanged"
+                   Margin="0,0,0,20"/>
+
+            <!-- Lista de alunos -->
+            <ListView x:Name="AlunosListView"
+                  ItemTapped="OnAlunoTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Nome}"
+                              Detail="{Binding Email}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        <Button x:Name="btnSelecionaraAluno" Text="Comfirmar" Clicked="btnSelecionarAluno_Clicked" Margin="0,20,0,0" BackgroundColor="#fcad03" />
+
+    </VerticalStackLayout>
+    </ContentPage>  

@@ -30,7 +30,7 @@
                 </x:Array>
             </Picker.ItemsSource>
         </Picker>
-        <Button Text="Cadastrar" Clicked="OnCadastrarClicked" Margin="0,20,0,0" BackgroundColor="#fcad03" />
+        <Button x:Name="btnCadastrar" Text="Cadastrar" Clicked="btnCadastrar_Clicked" Margin="0,20,0,0" BackgroundColor="#fcad03" />
         <Button Text="Limpar" Clicked="OnCancelarClicked" Margin="0,20,0,0" BackgroundColor="#fcad03"/>
     </VerticalStackLayout>
 </ContentPage>

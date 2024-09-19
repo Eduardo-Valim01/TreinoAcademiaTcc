@@ -64,10 +64,31 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="View\ListaAlunos.xaml.cs">
+	    <DependentUpon>ListaAlunos.xaml</DependentUpon>
+	  </Compile>
+	  <Compile Update="View\TreinoAluno.xaml.cs">
+	    <DependentUpon>TreinoAluno.xaml</DependentUpon>
+	  </Compile>
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="View\CadastroUsuario.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	  <MauiXaml Update="View\EscolhaSemanaALuno.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\IncluirTreino.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\Login.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\ListaAlunos.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\TreinoAluno.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

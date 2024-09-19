@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProjetoTCC.View.TreinoAluno"
+             Title="">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="Treinos do Dia" FontSize="24" HorizontalOptions="Center" Margin="0,0,0,20"/>
+
+        <CollectionView x:Name="TreinosCollectionView">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <Frame Margin="0,0,0,10" CornerRadius="10" HasShadow="True">
+                        <HorizontalStackLayout Padding="10">
+                            <Image Source="{Binding FotoAparelho}" WidthRequest="100" HeightRequest="100" Aspect="AspectFill"/>
+                            <VerticalStackLayout Padding="10">
+                                <Label Text="{Binding NumeroSeries}" FontSize="18"/>
+                                <Label Text="{Binding Repeticoes}" FontSize="16"/>
+                            </VerticalStackLayout>
+                        </HorizontalStackLayout>
+                    </Frame>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button x:Name="AddTreinoButton" Text="Confirmar Treino" Margin="0,10,0,0"/>
+    </VerticalStackLayout>
+</ContentPage>

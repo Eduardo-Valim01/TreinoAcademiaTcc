@@ -40,8 +40,11 @@
             </StackLayout>
 
             <Button x:Name="btnConfirmar" Clicked="btnConfirmar_Clicked" Text="Confirmar" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#fcad03"/>
+            <Button x:Name="btnAluno" Clicked="btnAluno_Clicked" Text="Aluno" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#fcad03"/>
+            <Button x:Name="btnProfessor" Clicked="btnProfessor_Clicked" Text="Professor" WidthRequest="100" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#fcad03"/>
 
-            <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" >
+
+        <StackLayout Orientation="Horizontal" Spacing="10" HorizontalOptions="Center" >
                 <Label Text="Não tem conta?" TextColor="Gray"/>
 
                 <Button x:Name="btnCadastrar" Clicked="btnCadastrar_Clicked" Text="Clique Aqui" WidthRequest="120" HeightRequest="25" CornerRadius="20" HorizontalOptions="Center" BackgroundColor="#1E90FF" Padding="0"/>

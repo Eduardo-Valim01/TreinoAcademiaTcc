@@ -12,7 +12,7 @@ namespace ProjetoTCC.Data
     {
         readonly SQLiteAsyncConnection _conexaoBD;
 
-        //public UsuarioData UsuarioDataTable { get; set; }
+        public UsuarioData UsuarioDataTable { get; set; }
 
 
         //construtor de conexao
@@ -22,7 +22,8 @@ namespace ProjetoTCC.Data
 
             _conexaoBD.CreateTableAsync<Usuario>().Wait();
 
-            
+
+            UsuarioDataTable = new UsuarioData(_conexaoBD);
 
 
         }
