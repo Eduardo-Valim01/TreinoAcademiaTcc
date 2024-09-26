@@ -27,7 +27,13 @@ namespace ProjetoTCC.View
             {
                 await DisplayAlert("Atenção", "Prencha todas informações", "Fechar");
                 return;
+            }
 
+            var cadastro = await App.BancoDados.UsuarioDataTable.SalvarUsuario(_usuario);
+
+            if (cadastro > 0)
+            {
+                await Navigation.PopAsync();
             }
         }
 

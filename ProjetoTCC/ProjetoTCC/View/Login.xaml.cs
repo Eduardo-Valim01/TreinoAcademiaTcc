@@ -27,6 +27,7 @@ public partial class Login : ContentPage
     private void btnProfessor_Clicked(object sender, EventArgs e)
     {
         Navigation.PushAsync(new ListaAlunos());
+       //COMITTTTTTTT
 
     }
 }
