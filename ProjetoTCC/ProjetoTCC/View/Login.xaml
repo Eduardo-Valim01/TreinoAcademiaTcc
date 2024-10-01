@@ -25,7 +25,7 @@
                 </Frame>
 
                 <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
-                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite seu Nome" Keyboard="Email"/>
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite seu Email" Keyboard="Email" x:Name="txtEmail"/>
                 </Frame>
             </StackLayout>
 
@@ -35,7 +35,7 @@
                 </Frame>
 
                 <Frame HeightRequest="45" Margin="-20,0,0,0" Padding="0" HasShadow="True" BorderColor="White" HorizontalOptions="FillAndExpand">
-                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite sua Senha" Keyboard="Email"/>
+                    <Entry Margin="20,0,0,0" VerticalOptions="Center" Placeholder="Digite sua Senha" Keyboard="Email" x:Name="txtSenha" />
                 </Frame>
             </StackLayout>
 

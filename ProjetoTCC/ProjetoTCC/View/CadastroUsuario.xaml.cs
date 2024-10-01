@@ -40,7 +40,7 @@ namespace ProjetoTCC.View
         private void OnCancelarClicked(object sender, EventArgs e)
         {
             // Implementar a lógica de cancelamento aqui
-            IDEntry.Text = string.Empty;
+            
             NomeEntry.Text = string.Empty;
             SexoPicker.SelectedIndex = -1;
             DataNascimentoPicker.Date = DateTime.Now;

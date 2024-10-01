@@ -26,11 +26,12 @@ namespace ProjetoTCC.Data
             return lista;
         }
 
-        public Task<Usuario> ObtemUsuario(string email, string senha)
+        public async Task<Usuario> ObtemUsuario(string email, string senha)
         {
-            var usuario = _conexaoBD .Table<Usuario>()
+            var usuario = await _conexaoBD.Table<Usuario>()
                 .Where(x => x.Email == email && x.Senha == senha)
                 .FirstOrDefaultAsync();
+
             return usuario;
         }
 

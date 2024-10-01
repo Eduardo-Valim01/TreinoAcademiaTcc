@@ -18,9 +18,8 @@ public partial class App : Application
             if (_bancoDados == null)
             {
                 _bancoDados =
-                    new SQLiteData(DependencyService
-                    .Get<ISQliteBD>()
-                    .SQLiteLocalPath("Dados.db3"));
+                    new SQLiteData(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Dados.db"));
+               
             }
             return _bancoDados;
         }
